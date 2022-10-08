@@ -48,11 +48,32 @@ fun main(args: Array<String>) {
     val user = setUser("Wjooee", 255)
     println(user)
 
+//    Condition
     val openHours = 7
     val now = 22
     if (now >= openHours) {
         println("already open")
     }
+    val office: String
+    if (now >= openHours) {
+        office = "office is open"
+    } else {
+        office = "office is close"
+    }
+    println(office)
+    val jajalOffice: Double
+    jajalOffice = if (openHours <= now) {
+        -1.01
+    } else {
+        1.01
+    }
+    println(jajalOffice)
+
+//  Conjuntion
+    val isOpen = 22 >= 7 && 22 <= 16
+    println("Open kah dirimu ? $isOpen")
+
+
 }
 
 fun ndakReturnFun (): Unit {

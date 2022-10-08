@@ -1,10 +1,11 @@
 // main function
 fun main(args: Array<String>) {
     var name: String = "huehue"
+    name = "beruba"
 
     print("hello my name is ")
     println(name + "Wahyuu bang")
-    println(if (1 === 2) "Alwwaa true" else "Alwayyy false")
+    println(if (name === "lao") "Alwwaa true" else "Alwayyy false")
 
     val satu = 1
     val dua = 2
@@ -42,4 +43,14 @@ fun main(args: Array<String>) {
     """.trimIndent()
     print(jajal)
 
+    ndakReturnFun()
+
+    val user = setUser("Wjooee", 255)
+    println(user)
 }
+
+fun ndakReturnFun (): Unit {
+    println("\njajajaln function yang ndak return")
+}
+
+fun setUser(name: String, age: Int): String = "Your name is $name and your age is $age"

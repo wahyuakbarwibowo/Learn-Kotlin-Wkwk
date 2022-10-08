@@ -47,6 +47,12 @@ fun main(args: Array<String>) {
 
     val user = setUser("Wjooee", 255)
     println(user)
+
+    val openHours = 7
+    val now = 22
+    if (now >= openHours) {
+        println("already open")
+    }
 }
 
 fun ndakReturnFun (): Unit {

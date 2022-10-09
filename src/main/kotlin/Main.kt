@@ -76,6 +76,7 @@ fun main(args: Array<String>) {
 //    Array
     val araAra = arrayOf('a', "heuhuehue", 1, 1000)
     println(araAra[1])
+    println(araAra.size)
 
     val intArr = intArrayOf(1, 4, 6)
     println(intArr[2])
@@ -89,6 +90,19 @@ fun main(args: Array<String>) {
     val jajArray = Array(4) { i -> i + 2 }
     println(jajArray[0])
     println(jajArray[2])
+
+//    Null Pointer Exception
+    val text: String? = null
+    println(text)
+    if (text !== null) {
+        println(text.length)
+    }
+
+//    Safe Call & Elvis Operator
+//    safe call
+    println(text?.length)
+//    elvis operator
+    println(text?: "default nih bos")
 
 
 }

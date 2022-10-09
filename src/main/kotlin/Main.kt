@@ -107,6 +107,40 @@ fun main(args: Array<String>) {
 //    string template
     val hour = 7
     println("office ${if (hour > 7) "already close bos" else "is open"}, hehe iso ngene")
+
+//    enumeration
+    val colorRed = Color.RED
+    val colorGreen = Color.GREEN
+    val colorBlue = Color.BLUE
+    println(colorGreen)
+
+    val fail: BasicAuth = BasicAuth.FAIL
+    println(fail)
+
+    var colors: Array<Color> = Color.values()
+    colors.forEach { color ->
+        println("$color")
+    }
+    val colorVal: Color = Color.valueOf("RED")
+    println("colorVal is $colorVal")
+    println("colorVal is ${colorVal.value.toString(16)}")
+
+    colors = enumValues()
+    colors.forEach { color ->
+        println(color)
+    }
+
+    var color: Color = enumValueOf("RED")
+    println("Color is $color")
+    println("color psoiton is ${color.ordinal}")
+
+    when (color) {
+        Color.BLUE -> println("Color is biru")
+        Color.RED -> println("colo is mearh")
+        Color.GREEN -> println("color is hijau")
+    }
+
+
 }
 
 fun ndakReturnFun (): Unit {
@@ -114,3 +148,28 @@ fun ndakReturnFun (): Unit {
 }
 
 fun setUser(name: String, age: Int): String = "Your name is $name and your age is $age"
+
+enum class Color(val value: Int) {
+    RED(0xFF0000) {
+                  override fun printValue() {
+                      println("value of RED is $value")
+                  }
+                  },
+    GREEN(0x00FF00) {
+                    override fun printValue() {
+                        println("value of GREEN is $value")
+                    }
+                    },
+    BLUE(0x0000FF) {
+        override fun printValue() {
+            println("value of bLUE is $value")
+        }
+    };
+
+    abstract fun printValue()
+
+}
+
+enum class BasicAuth {
+    SUCCESS, FAIL
+}

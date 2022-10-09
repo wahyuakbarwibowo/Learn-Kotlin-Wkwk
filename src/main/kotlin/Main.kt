@@ -73,6 +73,23 @@ fun main(args: Array<String>) {
     val isOpen = 22 >= 7 && 22 <= 16
     println("Open kah dirimu ? $isOpen")
 
+//    Array
+    val araAra = arrayOf('a', "heuhuehue", 1, 1000)
+    println(araAra[1])
+
+    val intArr = intArrayOf(1, 4, 6)
+    println(intArr[2])
+//    intArrayOf() : IntArray
+//    booleanArrayOf() : BooleanArray
+//    charArrayOf() : CharArray
+//    longArrayOf() : LongArray
+//    shortArrayOf() : ShortArray
+//    byteArrayOf() : ByteArray
+
+    val jajArray = Array(4) { i -> i + 2 }
+    println(jajArray[0])
+    println(jajArray[2])
+
 
 }
 

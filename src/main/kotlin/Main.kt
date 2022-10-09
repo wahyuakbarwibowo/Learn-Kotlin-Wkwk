@@ -104,7 +104,9 @@ fun main(args: Array<String>) {
 //    elvis operator
     println(text?: "default nih bos")
 
-
+//    string template
+    val hour = 7
+    println("office ${if (hour > 7) "already close bos" else "is open"}, hehe iso ngene")
 }
 
 fun ndakReturnFun (): Unit {

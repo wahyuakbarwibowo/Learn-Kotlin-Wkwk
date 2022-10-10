@@ -1,3 +1,5 @@
+import kotlin.random.Random
+
 // main function
 fun main(args: Array<String>) {
     var name: String = "huehue"
@@ -140,8 +142,56 @@ fun main(args: Array<String>) {
         Color.GREEN -> println("color is hijau")
     }
 
+//    when expresion
+    val value = 10
+    when(value) {
+        6 -> println("enammm")
+        20 -> println("rong poloh")
+        else -> println("embo")
+    }
 
+    val whenMasuk = when(value) {
+        10 -> "splolh"
+        else -> "else"
+    }
+    println(whenMasuk)
+
+    val anytype: Any = 12
+    when (anytype) {
+        is Long -> println("is long guys")
+        is Int -> println("is inege")
+        else -> {
+            println("ora jelas")
+            println(" ya kan")
+        }
+    }
+
+    val ranges = 10..50
+    val vscode = 35
+    when (vscode) {
+        in ranges -> println("in range bos")
+        !in ranges -> "negn job"
+        else -> "orjelas"
+    }
+
+    val registerNumber = when(val regis = getRegisterNumber()) {
+        in 1..50 -> 50 * regis
+        in 51..100 -> 100 * regis
+        else -> regis
+    }
+    println(registerNumber)
+    
+    loop@ for (i in 1..10) {
+        println("Outside loop")
+
+        for (j in 1..10) {
+            println("Inside loop " + j)
+            if (j > 5) break@loop
+        }
+    }
 }
+
+fun getRegisterNumber() = Random.nextInt(100)
 
 fun ndakReturnFun (): Unit {
     println("\njajajaln function yang ndak return")
